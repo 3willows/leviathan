@@ -67,3 +67,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.custom-line-spacing {
+  line-height: 1.75; /* Adjust this value as needed */
+}

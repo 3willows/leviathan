@@ -21,7 +21,7 @@ export default function Layout({ children }) {
     <html lang="en">
       <body 
         className={cn(
-          'antialiased',
+          'antialiased m-6 custom-line-spacing leading-relaxed text-xl',
           fontHeading.variable,
           fontBody.variable
         )}
