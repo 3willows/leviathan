@@ -3,6 +3,12 @@
 # Read the input file
 input_file="leviathan.html"
 
+# Parent directory for chapter directories
+parent_dir="contents"
+
+# Create the parent directory if it doesn't exist
+mkdir -p "$parent_dir"
+
 # Counter for naming output directories
 counter=0
 
@@ -12,16 +18,18 @@ echo "Starting to process file: $input_file"
 sed -n '/<div class="chapter">/,/<!--end chapter-->/p' "$input_file" |
 while IFS= read -r line
 do
-    if [[ $line == '<div class="chapter">'* ]]; then
-        ((counter++))
-        echo "Creating directory: Chapter_$counter"
-        mkdir "Chapter_$counter"
-        output_file="Chapter_$counter/page.tsx"
-    elif [[ $line == *'<!--end chapter-->' ]]; then
-        # End of the chapter, append the end tag and increment counter
-        echo "$line" >> "$output_file"
-    else
-        echo "$line" >> "$output_file"
+    if [[ $counter -lt 3 ]]; then
+        if [[ $line == '<div class="chapter">'* ]]; then
+            ((counter++))
+            echo "Creating directory: $parent_dir/Chapter_$counter"
+            mkdir "$parent_dir/Chapter_$counter"
+            output_file="$parent_dir/Chapter_$counter/page.tsx"
+            echo 'export default function Page() {return (<div>' >> "$output_file"
+        elif [[ $line == *'<!--end chapter-->'* ]]; then
+            echo "</div>)}" >> "$output_file"
+        else
+            echo "$line" >> "$output_file"
+        fi
     fi
 done
 
