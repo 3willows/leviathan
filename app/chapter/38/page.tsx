@@ -222,11 +222,11 @@ export default function Page() {return (<div>
       Daemonologie (that is to say, in their doctrine concerning Daemons,) and
       after them, the Romans called Tartarus; of which Virgill sayes,
     </p>
-<p class="poem">
+<p className="poem">
     Bis patet in præceps, tantem tendítque sub umbras,<br></br>
     Quantus ad æthereum cœli suspectus Olympum:
 </p>
-<p class="noindent">
+<p className="noindent">
       for that is a thing the proportion of Earth to Heaven cannot bear: but
       that wee should beleeve them there, indefinitely, where those men are, on
       whom God inflicted that Exemplary punnishment.
