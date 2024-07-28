@@ -16,4 +16,4 @@ Use Claude to generate
 
 - Use ```addLinks.sh``` to add wire up chapters to the table of contents.
 
-- Chapter 44 is not working.  Need to devise a test to see if a relevant "page.tsx" is longer (say) than 5 lines.
+- Chapter 44 and 48 not working.  Need to devise a test to see if a relevant "page.tsx" is longer (say) than 5 lines.
