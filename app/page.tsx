@@ -1,8 +1,5 @@
-/**
- * v0 by Vercel.
- * @see https://v0.dev/t/Irmwee5h6gW
- * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
- */
+import Link from "next/link"
+
 export default function Page() {
   return (
     <div className="bg-[#f5f5f5] text-[#333] font-serif mx-auto max-w-4xl px-8 py-12 shadow-lg">
@@ -10,7 +7,8 @@ export default function Page() {
       <h2 className="text-4xl font-bold mb-8">Table of Contents</h2>
       <ol className="list-decimal list-inside space-y-6">
         <li>
-          <a href="/chapter/1"> OF SENSE</a>
+        <base href="./users/" />
+          <Link href="/chapter/1"> OF SENSE</Link>
         </li>
         <li>
           <a href="/chapter/2"> OF IMAGINATION</a>
