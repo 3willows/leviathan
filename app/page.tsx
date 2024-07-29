@@ -10,6 +10,7 @@ export default function Page() {
           <Link href={`/hobbes`}> The book </Link></li>
           <li className="text-yellow-600">
          Motivation (to be written up) </li>
+         <li className="text-green-600"><a href="https://github.com/3willows/leviathan">Public repo</a></li>
       </ul>
     </div>
   )
