@@ -1,11 +1,9 @@
 "use client"
 
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 import { usePathname } from "next/navigation"
 
 export default function Page() {
-  const router = useRouter()
   const pathname = usePathname()
 
   return (
